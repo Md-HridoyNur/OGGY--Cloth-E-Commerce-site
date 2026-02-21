@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGGy Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">OGGy</h1>
+        <button class="cart-container" onclick="openCart()">Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>New Season Arrivals</h2>
+            <p>Discover the premium collection by OGGy.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+            <button class="filter-btn" onclick="filterProducts('polo')">Polos</button>
+            <button class="filter-btn" onclick="filterProducts('shirt')">Shirts</button>
+            <button class="filter-btn" onclick="filterProducts('tee')">Tees</button>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <button class="close-cart" onclick="closeCart()">&times;</button>
+            <h2>Your Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Items go here -->
+            </ul>
+            <div class="cart-total">
+                <h3>Total: $<span id="cart-total-amount">0.00</span></h3>
+            </div>
+            <button onclick="alert('Proceeding to checkout...')">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 OGGy Fashion. All rights reserved.</p>
+    </footer>
+</body>
+</html>
